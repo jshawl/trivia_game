@@ -1,8 +1,12 @@
-.board: {
+.board {
   border:
   background-color:
   margin:auto;
   padding: ;
-  
 
+
+}
+
+nav {
+    display: block;
 }
