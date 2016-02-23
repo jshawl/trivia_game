@@ -59,6 +59,12 @@ ul.topnav ul.right {
 .flex-item:first-child {
   background-color: cornflowerblue;
   width: 300px;
+  height: 60px;
+  margin: 20px;
+}
+.flex-item:nth-child(2) {
+  background-color: cornflowerblue;
+  width: 200px;
   height: 100px;
   margin: 10px;
 }
