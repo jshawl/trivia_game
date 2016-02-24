@@ -8,52 +8,56 @@ var countersDiv = document.querySelectorAll(".flex-item:nth-child(3)");
  // get questions and answers from preloaded subject arrays
 
 var playTrivia = {
+  counter: 0,
+  // display questions
   triviaQue: function() {
-      for (var i = 0; i < this.trivia.length; i++) {
-          questionsDiv[0].innerHTML =
-           this.trivia[i].question;
-      }
+        var questions = this.trivia[this.counter].question;
+        questionsDiv[0].innerHTML =  questions;
   },
 
+// display choices
   triviaChoices: function() {
-      for (var i = 0; i < this.trivia.length; i++) {
-        for (var j=0; j<this.trivia[i].choices.length; j++) {
-          answersDiv[0].innerHTML = this.trivia[i].choices[j] + "<input type='radio' />"
+
+        for (var j=0; j<this.trivia[this.counter].choices.length; j++) {
+          answersDiv[0].innerHTML += "<input type='radio' name='myRadio' />" + this.trivia[this.counter].choices[j]
+          // attach button to each choice
         }
-
-          // answersDiv[0].innerHTML = this.trivia[i].choices + "<input type='radio' />"
-
-          // create and append buttons to choices
-          // var button = document.createElement("BUTTON");
-          // var myButton = answersDiv.appendChild(btn);
-      }
   },
 
-// correctChoice: function(){
-//   for (var i=0; i<this.trivia.length; i++) {
-//     // if user click correctIndex button, increase number of correct answers by 1, else increae number of incorrect annswer by 1 and change to next question
-//     if ()
-//   }
-// }
+  triviaAnswer: function(){
+    var playerChoice = [answersDiv[0].elements['myRadio']];
+    for (var i=0; i < playerChoice.length; i++) {
+      playerChoice[i].checked = function() {
+        console.log(playerChoice.index)
+        // if (this.trivia[this.counter].answerIndex = playerChoice.index)
+        //playerChoice
+      }
+    }
+    // if user click answerIndex button, increase number of correct answers by 1, else increae number of incorrect annswer by 1 and change to next question
+
+  }
+
   trivia: [
-      { question: "What size is", choices: [10, 44, 15], correctIndex: 1 },
-      { question: "???", choices: [0, 1, 2], correctIndex: 2 },
-      { question: "Where is ", choices: [10, 44, 15], correctIndex: 1 },
-      { question: "How do I", choices: [10, 44, 15], correctIndex: 0 }
+      { question: "What size is",
+        choices: [10, 44, 17],
+        answerIndex: 1
+      },
+      { question: "???",
+        choices: [0, 1, 2],
+        answerIndex: 2
+      },
+      { question: "Where is ",
+        choices: [10, 44, 19],
+        answerIndex: 1
+      },
+      { question: "How do I",
+        choices: [10, 44, 14],
+        answerIndex: 0
+      }
 
   ]
 
 }
 playTrivia.triviaQue();
 playTrivia.triviaChoices();
-
-
-
-
-
-
-
-
-// var playTrivia = {
-//
-// };
+playTrivia.triviaAnswer()
