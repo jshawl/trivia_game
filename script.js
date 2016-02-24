@@ -17,12 +17,12 @@ var playTrivia = {
 
   triviaChoices: function() {
       for (var i = 0; i < this.trivia.length; i++) {
-        buildDeck: function() { // running continous loop in console
-         for (i = 0; i < values.length; j++) {
-              for (j = 0; j < suits.length; j++) {
-                game.deck.push(values[i]+suits[j]);
+        for (var j=0; j<this.trivia[i].choices.length; j++) {
+          answersDiv[0].innerHTML = this.trivia[i].choices[j] + "<input type='radio' />"
+        }
 
-          answersDiv[0].innerHTML = this.trivia[i].choices + "<input type='radio' />"
+          // answersDiv[0].innerHTML = this.trivia[i].choices + "<input type='radio' />"
+
           // create and append buttons to choices
           // var button = document.createElement("BUTTON");
           // var myButton = answersDiv.appendChild(btn);
