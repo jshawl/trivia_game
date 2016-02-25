@@ -1,104 +1,80 @@
-{ questions: From which country did French horns originate?”,
-choices:["Germany, Russia, UK"],
-answerIndex:1
-},
 
-{ questions: “What mineral is an Alaskan diamond?”,
-choices:["Graphite, Quartz, Gold], "],
-answerIndex:2
-},
-
-{ question: “what type of creature is Bombay duck?”,
-choices:["Bird", "Insect", "Fish"],
-answerIndex:3
-},
-
-{ question: “What color is orange blossom?”,
-choices:["Pink","Orange","White"],
-answerIndex:2
-},
-
-{ question: “Where did Panama hats originate?”,
-choices:["Ecuador","Panama","US"],
-answerIndex:1
-},
-
-{ question: “What type of creature is a prairie dog?”,
+{ question: "What type of creature is a prairie dog?",
 choices:["Rodent", "Dog", "Wolf"],
 answerIndex:1
 },
 
-{ question: “What meat is hamburger made from?”,
+{ question: "What meat is hamburger made from?",
 choices:["Beef", "pork","Lamb" ],
 answerIndex:1
 },
 
-{ question: “What type of alcoholic drink is barley wine?”,
+{ question: "What type of alcoholic drink is barley wine?",
 choices:["Whiskey","Vodka","Beer"],
 answerIndex:3
 },
 
-{ question: “What color is the black box on a plane?”,
+{ question: "What color is the black box on a plane?",
 choices:["Red","Black","Orange"],
 answerIndex:3
 },
 
-{ question: “In what continent did camels first evolve?”,
+{ question: "In what continent did camels first evolve?",
 choices:["Africa","North America","Asia"],
 answerIndex:2
 },
 
-{ question: “What nation invented the kilt?”,
+{ question: "What nation invented the kilt?",
 choices:["Scotland", "Ireland", "Croatia"],
 answerIndex:2
 },
 
-{ question: “How long was the 100 Years War?”,
+{ question: "How long was the 100 Years War?",
 choices:["101 years", "116 years", "110 years"],
 answerIndex:2
 },
 
-{ question: “What type of creature is a horned toad?”,
+{ question: "What type of creature is a horned toad?",
 choices:["Frog", "Toad", "Lizard"],
 answerIndex:3
 },
 
-{ question: “What is the liquid inside a coconut?”,
+{ question: "What is the liquid inside a coconut?",
 choices:["Coconut water", "Coconut milk", "Coconut oil"],
 answerIndex:1
 },
 
-{ question: “What color are white grapes?”,
+{ question: "What color are white grapes?",
 choices:["Pale-yellow", "Green", "Pink"],
 answerIndex:2
 },
 
-{ question: “What creatures are the Canary Islands named after?”,
+{ question: "What creatures are the Canary Islands named after?",
 choices:["Dogs", "Birds", "Lizard")"],
 answerIndex:1
 },
 
-{ question: “In which month is the October Revolution celebrated in Russia?”,
+{ question: "In which month is the October Revolution celebrated in Russia?",
 choices:["October", "November", "December"],
 answerIndex:2
 },
 
-{ question: “What type of insect is a Spanish fly?”,
+{ question: "What type of insect is a Spanish fly?",
 choices:["Ant", "Dragonfly", "Beetle"],
 answerIndex:3
 },
 
-{ question: “Arabic numerals originated in which country?”,
+{ question: "Arabic numerals originated in which country?",
 choices:["Egypt","Saudi Arabia","India"],
 answerIndex:1
 },
 
-{ question: “What country invented baseball?”,
+{ question: "What country invented baseball?",
 choices:["Canada","England", "US"],
 answerIndex:2
 },
 
-{ question: “What signal was given by Roman emperors to call for the death of a gladiatorial contestant?”,
+{ question: "What signal was given by Roman emperors to call for the death of a gladiatorial contestant?",
 choices:["Thumb-up", "Thumb-down", "Middle-finger"],
 answerIndex:1
 }
