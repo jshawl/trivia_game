@@ -68,7 +68,7 @@ var playTrivia = {
             }
             else {
               // totalQuestionsAsked++
-              alert("Wrong");
+              alert("Wrong!  Correct answer is " +  correctAnswer);
             }
             countersDiv.innerHTML = "You answered " + totalAnswerCorrect + " of " + playTrivia.counters +" questions correctly "
 
