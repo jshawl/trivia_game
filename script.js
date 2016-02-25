@@ -15,19 +15,10 @@ var playTrivia = {
   totalQuestionsAsked: 0,
   counters: 0,
   currentTrivia: function(){
-    // console.log("counters:", this.counters);
-    // console.log("triv:", this.trivia);
-    // console.log("triv[0]:", this.trivia[0]);
     return this.trivia[this.counters];
   },
   // display questions
   triviaQue: function() {
-    // console.log("counters:", this.counters);
-    // console.log("triv:", this.trivia);
-    // console.log("triv[0]:", this.trivia[0]);
-
-
-    console.log("curTriv:", this.currentTrivia())
         var question = this.currentTrivia().question;
         questionsDiv.innerHTML =  question;
         this.triviaChoices();
@@ -42,28 +33,22 @@ var playTrivia = {
           var choice = this.currentTrivia().choices[j];
           // TODO: use label for "choice" caption/text
           choicesDiv.innerHTML += "<input type='radio' class="+ j + "  value='" + choice + "' />" + choice
-
         }
         var answer = this.currentTrivia().answerIndex
         // add eventHandlers for all myRadio
         for (var i=0; i< choicesDiv.children.length; i++){
           // console.log(choicesDiv)
-          console.log(choicesDiv.children[i])
           choicesDiv.children[i].addEventListener("click",playTrivia.triviaAnswers)
         }
       },
     triviaAnswers: function(event){
             var playerChoiceRadio = event.target;
             event.preventDefault() //??
-            console.log("clicked radio:", playerChoiceRadio)
             var playerChoice = playerChoiceRadio.value
             var correctAnswer = playTrivia.currentTrivia().choices[playTrivia.currentTrivia().answerIndex];
-            console.log("choice", playerChoice)
-            console.log("correctAnswer", correctAnswer)
             playTrivia.counters++
             if (playerChoice == correctAnswer) {
               totalAnswerCorrect++
-
               alert("Correct");
             }
             else {
@@ -186,4 +171,3 @@ var playTrivia = {
 }
 
 playTrivia.triviaQue();
-// playTrivia.triviaChoices();
