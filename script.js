@@ -9,36 +9,58 @@ var playTrivia = {
   totalAnswerCorrect: 0,
   totalQuestionsAsked: 0,
   counters: 0,
+  currentTrivia: function(){
+    // console.log("counters:", this.counters);
+    // console.log("triv:", this.trivia);
+    // console.log("triv[0]:", this.trivia[0]);
+    return this.trivia[this.counters];
+  },
   // display questions
   triviaQue: function() {
-        var questions = this.trivia[this.counters].question;
-        questionsDiv.innerHTML =  questions;
+    // console.log("counters:", this.counters);
+    // console.log("triv:", this.trivia);
+    // console.log("triv[0]:", this.trivia[0]);
+
+
+    console.log("curTriv:", this.currentTrivia())
+        var question = this.currentTrivia().question;
+        questionsDiv.innerHTML =  question;
   },
 // display choices
   triviaChoices: function() {
+
     // Loop through, attach button and print each choice
-        for (var j=0; j<this.trivia[this.counters].choices.length; j++) {
-          choicesDiv.innerHTML += "<input type='radio' class="+ j + " />" + this.trivia[this.counters].choices[j]
+        for (var j=0; j<this.currentTrivia().choices.length; j++) {
+          var choice = this.currentTrivia().choices[j];
+          // TODO: use label for "choice" caption/text
+          choicesDiv.innerHTML += "<input type='radio' class="+ j + "  value='" + choice + "' />" + choice
         }
-        var answer = this.trivia[this.counters].answerIndex
+        var answer = this.currentTrivia().answerIndex
         // add eventHandlers for all myRadio
         for (var i=0; i< choicesDiv.children.length; i++){
           // console.log(choicesDiv)
           console.log(choicesDiv.children[i])
-          choicesDiv.children[i].addEventListener("click",playTrivia.triviaAnswers())
+          choicesDiv.children[i].addEventListener("click",playTrivia.triviaAnswers)
         }
       },
-    triviaAnswers: function(){
-            var playerChoiceRadio = choicesDiv.children
-            // console.log("clicked radio:", playerChoiceRadio)
-            var playerChoice = playerChoiceRadio //???
-            countersDiv = this.counters++
-            if (playerChoiceRadio == this.trivia.correctIndex) {
+    triviaAnswers: function(event){
+            // var playerChoiceRadio = choicesDiv.children
+            var playerChoiceRadio = event.target;
+            console.log("clicked radio:", playerChoiceRadio)
+            var playerChoice = playerChoiceRadio.value
+            var correctAnswer = playTrivia.currentTrivia().choices[playTrivia.currentTrivia().answerIndex];
+            console.log("choice", playerChoice)
+            console.log("correctAnswer", correctAnswer)
+            if (playerChoice == correctAnswer) {
+              alert("Correct");
               totalAnswerCorrect++
             }
             else {
               // totalQuestionsAsked++
+              alert("Wrong");
             }
+
+            countersDiv = this.counters++
 
             // if user click answerIndex button, increase number of correct answers by 1, else increae number of incorrect annswer by 1 and change to next question
 
@@ -47,6 +69,7 @@ var playTrivia = {
       { question: "What size is",
         choices: [10, 44, 17],
         answerIndex: 1
+
       },
       { question: "???",
         choices: [0, 1, 2],
