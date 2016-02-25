@@ -5,6 +5,11 @@ var questionsDiv = document.getElementById("question");
 var choicesDiv = document.getElementById("choices");
 var countersDiv = document.getElementById("counter");
 
+function playerName(){
+  if (playerName){
+
+  }
+}
 totalAnswerCorrect = 0;
 var playTrivia = {
   totalQuestionsAsked: 0,
@@ -25,11 +30,14 @@ var playTrivia = {
     console.log("curTriv:", this.currentTrivia())
         var question = this.currentTrivia().question;
         questionsDiv.innerHTML =  question;
+        this.triviaChoices();
   },
 // display choices
   triviaChoices: function() {
+        // clear choices
+        choicesDiv.innerHTML = "";
 
-    // Loop through, attach button and print each choice
+        // Loop through, attach button and print each choice
         for (var j=0; j<this.currentTrivia().choices.length; j++) {
           var choice = this.currentTrivia().choices[j];
           // TODO: use label for "choice" caption/text
@@ -178,4 +186,4 @@ var playTrivia = {
 }
 
 playTrivia.triviaQue();
-playTrivia.triviaChoices();
+// playTrivia.triviaChoices();
