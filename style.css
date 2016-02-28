@@ -1,8 +1,10 @@
 @media screen and (min-width: 100px){
+  /* nice use of media query */
 body{
   background-image: url("http://si.wsj.net/public/resources/images/BN-MT446_trivia_JV_20160224131821.jpg"), url("");
+  /* download this image and link to it locally */
       /*background-color: #cccccc;*/
-  font-family-sans-serif:  "Helvetica Neue", Helvetica;
+  font-family-sans-serif:  "Helvetica Neue", Helvetica, sans-serif;
 
 }
 .not-active {
@@ -46,12 +48,33 @@ ul.topnav ul.right {
 .flex-container {
     display: -webkit-flex;
     display: flex;
+    /* nice use of flexbox !*/
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
 }
 }
+
+/*
+
+#choices
+ 
+To style the choices, you can wrap each input in a label tag,
+and style the input:
+
+<label>
+  <input type='radio'> Germany
+</label>
+
+#choices label{
+  border: 1px solid black;
+  border-radius:5px;
+  padding:1em;
+  etc...
+}
+ 
+ */
 
 .flex-item {
     background-color: #84ae6a;
@@ -61,19 +84,8 @@ ul.topnav ul.right {
     border: 2px solid #777777;
     border-radius: 25px;
 }
-.flex-item:first-child {
-  background-color: ;
-  width: ;
-  height: ;
-  margin: ;
-
-
-}
+/* remove unused code */
 .flex-item:nth-child(2) {
-  background-color: ;
-  width: ;
   height: 100px;
-  margin: ;
   font-size: 20px: ;
-
 }

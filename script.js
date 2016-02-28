@@ -7,10 +7,10 @@ var countersDiv = document.getElementById("counter");
 
 function playerName(){
   if (playerName){
-
+// remove unused code
   }
 }
-totalAnswerCorrect = 0;
+var totalAnswerCorrect = 0;
 var playTrivia = {
   totalQuestionsAsked: 0,
   counters: 0,
@@ -19,6 +19,8 @@ var playTrivia = {
   },
   // display questions
   triviaQue: function() {
+	// if you shuffle this.trivia here, your questions will be randomized, eg.
+	// http://stackoverflow.com/a/6274381/850825
         var question = this.currentTrivia().question;
         questionsDiv.innerHTML =  question;
         this.triviaChoices();
@@ -43,7 +45,7 @@ var playTrivia = {
       },
     triviaAnswers: function(event){
             var playerChoiceRadio = event.target;
-            event.preventDefault() //??
+            event.preventDefault() //?? prevents form from submitting
             var playerChoice = playerChoiceRadio.value
             var correctAnswer = playTrivia.currentTrivia().choices[playTrivia.currentTrivia().answerIndex];
             playTrivia.counters++
@@ -167,7 +169,12 @@ var playTrivia = {
         choices:["Thumb-up", "Thumb-down", "Middle-finger"],
         answerIndex:0
       }
+      // excellent structure for questions / answers!!
   ]
 }
 
 playTrivia.triviaQue();
+
+// your code looks great! Things to work on in the future:
+// code indentation
+// avoiding many global variables
